@@ -15,5 +15,5 @@ const parent = prim(graph);
 
 console.log('Edge   Weight');
 for (let i = 1; i < graph.length; i++) {
-  console.log(parent[i] + ' - ' + i + '   ' + graph[i][parent[i]]);
+  console.log(`${parent[i]} - ${i}   ${graph[i][parent[i]]}`);
 }

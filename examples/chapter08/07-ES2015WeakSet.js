@@ -1,4 +1,4 @@
-var set = new WeakSet();
+const set = new WeakSet();
 
 const ob1 = { name: 'Gandalf' };
 const ob2 = { name: 'John' };

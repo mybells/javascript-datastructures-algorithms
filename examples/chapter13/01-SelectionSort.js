@@ -1,9 +1,9 @@
 const { bubbleSort } = PacktDataStructuresAlgorithms;
 
-function createNonSortedArray(){
-  var array = [];
-  for (let i = 5; i > 0; i--){
-      array.push(i);
+function createNonSortedArray() {
+  const array = [];
+  for (let i = 5; i > 0; i--) {
+    array.push(i);
   }
   return array;
 }

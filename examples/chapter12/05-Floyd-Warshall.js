@@ -17,9 +17,9 @@ dist = floydWarshall(graph);
 let s = '';
 for (let i = 0; i < dist.length; ++i) {
   s = '';
-  for (var j = 0; j < dist.length; ++j) {
+  for (let j = 0; j < dist.length; ++j) {
     if (dist[i][j] === INF) s += 'INF ';
-    else s += dist[i][j] + '   ';
+    else s += `${dist[i][j]}   `;
   }
   console.log(s);
 }

@@ -26,7 +26,7 @@ console.log(graph.toString());
 
 console.log('********* dfs with callback ***********');
 
-const printVertex = value => console.log('Visited vertex: ' + value);
+const printVertex = value => console.log(`Visited vertex: ${value}`);
 
 depthFirstSearch(graph, printVertex);
 
@@ -61,7 +61,7 @@ for (let count = 0; count < myVertices.length; count++) {
       maxName = myVertices[i];
     }
   }
-  s += ' - ' + maxName;
+  s += ` - ${maxName}`;
   delete fTimes[maxName];
 }
 console.log(s);

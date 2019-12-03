@@ -1,5 +1,5 @@
 // @ts-check
-
+// 栈对象实现
 export default class Stack {
   constructor() {
     this.count = 0;

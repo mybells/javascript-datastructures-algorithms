@@ -1,35 +1,35 @@
 (function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["module", "exports"], factory);
-  } else if (typeof exports !== "undefined") {
+  if (typeof define === 'function' && define.amd) {
+    define(['module', 'exports'], factory);
+  } else if (typeof exports !== 'undefined') {
     factory(module, exports);
   } else {
-    var mod = {
+    const mod = {
       exports: {}
     };
     factory(mod, mod.exports);
     global.Book = mod.exports;
   }
-})(this, function (module, exports) {
-  "use strict";
+}(this, (module, exports) => {
 
-  Object.defineProperty(exports, "__esModule", {
+
+  Object.defineProperty(exports, '__esModule', {
     value: true
   });
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
+      throw new TypeError('Cannot call a class as a function');
     }
   }
 
-  var _createClass = function () {
+  const _createClass = (function () {
     function defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
+      for (let i = 0; i < props.length; i++) {
+        const descriptor = props[i];
         descriptor.enumerable = descriptor.enumerable || false;
         descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
+        if ('value' in descriptor) descriptor.writable = true;
         Object.defineProperty(target, descriptor.key, descriptor);
       }
     }
@@ -39,9 +39,9 @@
       if (staticProps) defineProperties(Constructor, staticProps);
       return Constructor;
     };
-  }();
+  }());
 
-  var Book = function () {
+  const Book = (function () {
     function Book(title) {
       _classCallCheck(this, Book);
 
@@ -49,15 +49,15 @@
     }
 
     _createClass(Book, [{
-      key: "printTitle",
+      key: 'printTitle',
       value: function printTitle() {
         console.log(this.title);
       }
     }]);
 
     return Book;
-  }();
+  }());
 
   exports.default = Book;
-  module.exports = exports["default"];
-});
+  module.exports = exports.default;
+}));

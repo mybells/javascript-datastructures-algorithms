@@ -2,23 +2,23 @@ const { HashTable } = PacktDataStructuresAlgorithms;
 
 const hash = new HashTable();
 
-console.log(hash.hashCode('Gandalf') + ' - Gandalf');
-console.log(hash.hashCode('John') + ' - John');
-console.log(hash.hashCode('Tyrion') + ' - Tyrion');
+console.log(`${hash.hashCode('Gandalf')} - Gandalf`);
+console.log(`${hash.hashCode('John')} - John`);
+console.log(`${hash.hashCode('Tyrion')} - Tyrion`);
 
 console.log(' ');
 
-console.log(hash.hashCode('Ygritte') + ' - Ygritte');
-console.log(hash.hashCode('Jonathan') + ' - Jonathan');
-console.log(hash.hashCode('Jamie') + ' - Jamie');
-console.log(hash.hashCode('Jack') + ' - Jack');
-console.log(hash.hashCode('Jasmine') + ' - Jasmine');
-console.log(hash.hashCode('Jake') + ' - Jake');
-console.log(hash.hashCode('Nathan') + ' - Nathan');
-console.log(hash.hashCode('Athelstan') + ' - Athelstan');
-console.log(hash.hashCode('Sue') + ' - Sue');
-console.log(hash.hashCode('Aethelwulf') + ' - Aethelwulf');
-console.log(hash.hashCode('Sargeras') + ' - Sargeras');
+console.log(`${hash.hashCode('Ygritte')} - Ygritte`);
+console.log(`${hash.hashCode('Jonathan')} - Jonathan`);
+console.log(`${hash.hashCode('Jamie')} - Jamie`);
+console.log(`${hash.hashCode('Jack')} - Jack`);
+console.log(`${hash.hashCode('Jasmine')} - Jasmine`);
+console.log(`${hash.hashCode('Jake')} - Jake`);
+console.log(`${hash.hashCode('Nathan')} - Nathan`);
+console.log(`${hash.hashCode('Athelstan')} - Athelstan`);
+console.log(`${hash.hashCode('Sue')} - Sue`);
+console.log(`${hash.hashCode('Aethelwulf')} - Aethelwulf`);
+console.log(`${hash.hashCode('Sargeras')} - Sargeras`);
 
 hash.put('Ygritte', 'ygritte@email.com');
 hash.put('Jonathan', 'jonathan@email.com');

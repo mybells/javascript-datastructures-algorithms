@@ -1,5 +1,5 @@
 // @ts-check
-
+// 栈数组实现
 export default class StackArray {
   constructor() {
     this.items = [];

@@ -7,5 +7,5 @@ function recursiveFn() {
 try {
   recursiveFn();
 } catch (ex) {
-  console.log('i = ' + i + ' error: ' + ex);
+  console.log(`i = ${i} error: ${ex}`);
 }

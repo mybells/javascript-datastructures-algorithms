@@ -24,4 +24,3 @@ console.log(maxHeap.getAsArray());
 
 console.log('Extract minimum: ', maxHeap.extract());
 console.log(maxHeap.getAsArray());
-
