@@ -1,5 +1,5 @@
 // @ts-check
-
+// 双端队列对象实现类
 export default class Deque {
   constructor() {
     this.count = 0;

@@ -1,5 +1,5 @@
 // @ts-check
-
+// 队列对象实现类
 export default class Queue {
   constructor() {
     this.count = 0;

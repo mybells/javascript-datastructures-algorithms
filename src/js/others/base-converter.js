@@ -1,6 +1,6 @@
 // @ts-check
 import Stack from '../data-structures/stack';
-
+// 栈-二进制转换
 export function decimalToBinary(decNumber) {
   const remStack = new Stack();
   let number = decNumber;
@@ -19,7 +19,7 @@ export function decimalToBinary(decNumber) {
 
   return binaryString;
 }
-
+// 栈-进制转换
 export function baseConverter(decNumber, base) {
   const remStack = new Stack();
   const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';

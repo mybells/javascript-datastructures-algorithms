@@ -1,5 +1,5 @@
 import Queue from '../data-structures/queue';
-
+// 队列-击鼓传花游戏
 export function hotPotato(elementsList, num) {
   const queue = new Queue();
   const elimitatedList = [];

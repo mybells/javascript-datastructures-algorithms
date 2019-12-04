@@ -1,5 +1,5 @@
 import Deque from '../data-structures/deque';
-
+// 双端队列-回文字符串检查器
 export function palindromeChecker(aString) {
   if (
     aString === undefined
