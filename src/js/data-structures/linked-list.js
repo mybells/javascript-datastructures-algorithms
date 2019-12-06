@@ -1,6 +1,6 @@
 import { defaultEquals } from '../util';
 import { Node } from './models/linked-list-models';
-
+// 链表实现
 export default class LinkedList {
   constructor(equalsFn = defaultEquals) {
     this.equalsFn = equalsFn;

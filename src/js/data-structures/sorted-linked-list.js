@@ -1,6 +1,6 @@
 import { Compare, defaultCompare, defaultEquals } from '../util';
 import LinkedList from './linked-list';
-
+// 有序链表
 export default class SortedLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals, compareFn = defaultCompare) {
     super(equalsFn);

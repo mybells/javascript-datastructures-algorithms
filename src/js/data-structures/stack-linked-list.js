@@ -1,5 +1,5 @@
 import DoublyLinkedList from './doubly-linked-list';
-
+// 链表实现栈
 export default class StackLinkedList {
   constructor() {
     this.items = new DoublyLinkedList();

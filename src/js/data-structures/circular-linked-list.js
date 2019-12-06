@@ -1,7 +1,7 @@
 import { defaultEquals } from '../util';
 import LinkedList from './linked-list';
 import { Node } from './models/linked-list-models';
-
+// 循环链表
 export default class CircularLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
     super(equalsFn);
