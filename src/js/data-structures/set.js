@@ -1,3 +1,4 @@
+//集合实现
 export default class Set {
   constructor() {
     this.items = {};
