@@ -1,6 +1,6 @@
 import { defaultToString } from '../util';
 import { ValuePair } from './models/value-pair';
-
+//散列表
 export default class HashTable {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;

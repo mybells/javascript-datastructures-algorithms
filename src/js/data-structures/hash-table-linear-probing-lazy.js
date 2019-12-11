@@ -1,6 +1,6 @@
 import { defaultToString } from '../util';
 import { ValuePairLazy } from './models/value-pair-lazy';
-
+//散列表冲突解决-线性探查（软删除方法）
 export default class HashTableLinearProbingLazy {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
@@ -27,8 +27,8 @@ export default class HashTableLinearProbingLazy {
     if (key != null && value != null) {
       const position = this.hashCode(key);
       if (
-        this.table[position] == null
-        || (this.table[position] != null && this.table[position].isDeleted)
+        this.table[position] == null ||
+        (this.table[position] != null && this.table[position].isDeleted)
       ) {
         this.table[position] = new ValuePairLazy(key, value);
       } else {
@@ -51,8 +51,8 @@ export default class HashTableLinearProbingLazy {
       }
       let index = position + 1;
       while (
-        this.table[index] != null
-        && (this.table[index].key !== key || this.table[index].isDeleted)
+        this.table[index] != null &&
+        (this.table[index].key !== key || this.table[index].isDeleted)
       ) {
         if (this.table[index].key === key && this.table[index].isDeleted) {
           return undefined;
@@ -60,9 +60,9 @@ export default class HashTableLinearProbingLazy {
         index++;
       }
       if (
-        this.table[index] != null
-        && this.table[index].key === key
-        && !this.table[index].isDeleted
+        this.table[index] != null &&
+        this.table[index].key === key &&
+        !this.table[index].isDeleted
       ) {
         return this.table[position].value;
       }
@@ -79,15 +79,15 @@ export default class HashTableLinearProbingLazy {
       }
       let index = position + 1;
       while (
-        this.table[index] != null
-        && (this.table[index].key !== key || this.table[index].isDeleted)
+        this.table[index] != null &&
+        (this.table[index].key !== key || this.table[index].isDeleted)
       ) {
         index++;
       }
       if (
-        this.table[index] != null
-        && this.table[index].key === key
-        && !this.table[index].isDeleted
+        this.table[index] != null &&
+        this.table[index].key === key &&
+        !this.table[index].isDeleted
       ) {
         this.table[index].isDeleted = true;
         return true;
