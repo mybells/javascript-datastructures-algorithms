@@ -1,3 +1,4 @@
+//计算阶乘
 export function factorialIterative(number) {
   if (number < 0) {
     return undefined;

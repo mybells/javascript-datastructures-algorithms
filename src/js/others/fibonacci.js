@@ -1,3 +1,4 @@
+//斐波那契数列
 export function fibonacci(n) {
   if (n < 1) {
     return 0;
@@ -7,7 +8,7 @@ export function fibonacci(n) {
   }
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
-
+//迭代
 export function fibonacciIterative(n) {
   if (n < 1) { return 0; }
   let fibNMinus2 = 0;
@@ -20,7 +21,7 @@ export function fibonacciIterative(n) {
   }
   return fibN;
 }
-
+//尾调用优化
 export function fibonacciMemoization(n) {
   if (n < 1) { return 0; }
   const memo = [0, 1];
