@@ -1,4 +1,3 @@
-
 const Compare = {
   LESS_THAN: -1,
   BIGGER_THAN: 1,
@@ -65,7 +64,8 @@ class BinarySearchTree {
     }
     if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
       return this.searchNode(node.left, key);
-    } if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+    }
+    if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
       return this.searchNode(node.right, key);
     }
     return true;
@@ -142,7 +142,8 @@ class BinarySearchTree {
     if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
       node.left = this.removeNode(node.left, key);
       return node;
-    } if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+    }
+    if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
       node.right = this.removeNode(node.right, key);
       return node;
     }
@@ -160,7 +161,8 @@ class BinarySearchTree {
     if (node.left == null) {
       node = node.right;
       return node;
-    } if (node.right == null) {
+    }
+    if (node.right == null) {
       node = node.left;
       return node;
     }
@@ -172,19 +174,28 @@ class BinarySearchTree {
   }
 }
 
+function getNodeHeight(node) {
+  if (node == null) {
+    return -1;
+  }
+  console.log(`key:${(node && node.key) || undefined}`);
+  return Math.max(getNodeHeight(node.left), getNodeHeight(node.right)) + 1;
+}
 const tree = new BinarySearchTree();
-tree.insert(1);
-tree.insert(3);
 tree.insert(8);
+tree.insert(3);
 tree.insert(10);
+tree.insert(1);
+tree.insert(6);
 tree.insert(14);
 tree.insert(13);
 tree.insert(4);
-tree.insert(6);
 tree.insert(7);
-document.write(`<br>中序遍历`);
+document.write('<br>中序遍历');
 tree.inOrderTraverse((v) => document.write(`${v}\n`));
 document.write('<br>前序遍历');
 tree.preOrderTraverse((v) => document.write(`${v}\n`));
 document.write('<br>后序遍历');
 tree.postOrderTraverse((v) => document.write(`${v}\n`));
+
+console.log(getNodeHeight(tree.root));
