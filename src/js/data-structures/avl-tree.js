@@ -1,7 +1,7 @@
 import { Compare, defaultCompare } from '../util';
 import BinarySearchTree from './binary-search-tree';
 import { Node } from './models/node';
-
+// 自平衡树
 const BalanceFactor = {
   UNBALANCED_RIGHT: 1,
   SLIGHTLY_UNBALANCED_RIGHT: 2,
